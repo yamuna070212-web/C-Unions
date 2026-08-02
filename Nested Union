@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+union Inner
+{
+    int x;
+    float y;
+};
+
+union Outer
+{
+    union Inner data;
+    char ch;
+};
+
+int main()
+{
+    union Outer obj;
+
+    obj.data.x = 500;
+
+    printf("Value = %d\n", obj.data.x);
+
+    return 0;
+}
+Output
+Value = 500

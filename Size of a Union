@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+union Data
+{
+    int i;
+    float f;
+    char ch;
+};
+
+int main()
+{
+    printf("Size of Union = %lu bytes\n",
+           sizeof(union Data));
+
+    return 0;
+}
+Sample Output
+Size of Union = 4 bytes
+

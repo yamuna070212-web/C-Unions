@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
+union Info
+{
+    char name[30];
+    int age;
+};
+
+int main()
+{
+    union Info person;
+
+    strcpy(person.name, "Rahul");
+
+    printf("Name = %s\n", person.name);
+
+    return 0;
+}
+Output
+Name = Rahul

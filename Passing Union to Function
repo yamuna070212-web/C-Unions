@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+union Data
+{
+    int value;
+};
+
+void printValue(union Data d)
+{
+    printf("Value = %d\n", d.value);
+}
+
+int main()
+{
+    union Data d;
+
+    d.value = 999;
+
+    printValue(d);
+
+    return 0;
+}
+Output
+Value = 999

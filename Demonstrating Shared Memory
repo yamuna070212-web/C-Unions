@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+union Data
+{
+    int i;
+    float f;
+};
+
+int main()
+{
+    union Data d;
+
+    d.i = 100;
+
+    printf("Integer = %d\n", d.i);
+
+    d.f = 12.5;
+
+    printf("Float = %.2f\n", d.f);
+
+    printf("Integer after float assignment = %d\n", d.i);
+
+    return 0;
+}
+Output (Example)
+Integer = 100
+Float = 12.50
+Integer after float assignment = 1095237632

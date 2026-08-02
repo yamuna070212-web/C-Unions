@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+union Data
+{
+    int i;
+    char ch;
+};
+
+int main()
+{
+    union Data d;
+
+    d.ch = 'A';
+
+    printf("Character = %c\n", d.ch);
+
+    return 0;
+}
+Output
+Character = A

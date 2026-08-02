@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+union Number
+{
+    int num;
+};
+
+union Number getValue()
+{
+    union Number n;
+
+    n.num = 500;
+
+    return n;
+}
+
+int main()
+{
+    union Number n = getValue();
+
+    printf("Number = %d\n", n.num);
+
+    return 0;
+}
+Output
+Number = 500

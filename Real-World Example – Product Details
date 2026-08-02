@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+union Price
+{
+    int wholePrice;
+    float decimalPrice;
+};
+
+int main()
+{
+    union Price p;
+
+    p.decimalPrice = 499.99;
+
+    printf("Product Price = %.2f\n", p.decimalPrice);
+
+    return 0;
+}
+Output
+Product Price = 499.99

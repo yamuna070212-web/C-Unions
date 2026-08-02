@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+struct Student
+{
+    int id;
+
+    union
+    {
+        int marks;
+        char grade;
+    } result;
+};
+
+int main()
+{
+    struct Student s;
+
+    s.id = 101;
+    s.result.marks = 95;
+
+    printf("ID = %d\n", s.id);
+    printf("Marks = %d\n", s.result.marks);
+
+    return 0;
+}
+Output
+ID = 101
+Marks = 95

@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+union Number
+{
+    int num;
+};
+
+void display(union Number n)
+{
+    printf("Number = %d\n", n.num);
+}
+
+int main()
+{
+    union Number n;
+
+    n.num = 250;
+
+    display(n);
+
+    return 0;
+}
+Output
+Number = 250

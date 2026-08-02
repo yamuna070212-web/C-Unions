@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+typedef union
+{
+    int id;
+    float salary;
+} Employee;
+
+int main()
+{
+    Employee e;
+
+    e.id = 101;
+    printf("Employee ID = %d\n", e.id);
+
+    return 0;
+}
+Output
+Employee ID = 101

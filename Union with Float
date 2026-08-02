@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+union Data
+{
+    int i;
+    float f;
+};
+
+int main()
+{
+    union Data d;
+
+    d.f = 45.75;
+
+    printf("Float = %.2f\n", d.f);
+
+    return 0;
+}
+Output
+Float = 45.75

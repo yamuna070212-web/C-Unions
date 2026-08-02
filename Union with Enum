@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+enum Type
+{
+    INTEGER,
+    DECIMAL
+};
+
+union Value
+{
+    int i;
+    float f;
+};
+
+int main()
+{
+    enum Type type = DECIMAL;
+    union Value value;
+
+    if(type == INTEGER)
+    {
+        value.i = 100;
+        printf("%d\n", value.i);
+    }
+    else
+    {
+        value.f = 12.75;
+        printf("%.2f\n", value.f);
+    }
+
+    return 0;
+}
+Output
+12.75

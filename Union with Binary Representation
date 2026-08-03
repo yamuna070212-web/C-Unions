@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+union Binary
+{
+    int number;
+    unsigned char bytes[4];
+};
+
+int main()
+{
+    union Binary b;
+
+    b.number = 16909060;
+
+    printf("Bytes:\n");
+
+    for(int i = 0; i < 4; i++)
+    {
+        printf("%u ", b.bytes[i]);
+    }
+
+    return 0;
+}
+Sample Output
+Bytes:
+4 3 2 1
+
+Note: Output depends on your system's endianness (byte order). Some systems may display the bytes in a different order.

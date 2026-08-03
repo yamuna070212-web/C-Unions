@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+union Marks
+{
+    int theory;
+    float cgpa;
+};
+
+int main()
+{
+    union Marks m;
+
+    m.cgpa = 9.25;
+
+    printf("CGPA = %.2f\n", m.cgpa);
+
+    return 0;
+}
+Output
+CGPA = 9.25

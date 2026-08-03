@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+union Number
+{
+    int num;
+    float marks;
+};
+
+int main()
+{
+    union Number *ptr;
+
+    ptr = (union Number *)malloc(sizeof(union Number));
+
+    ptr->num = 500;
+
+    printf("Number = %d\n", ptr->num);
+
+    free(ptr);
+
+    return 0;
+}
+Output
+Number = 500

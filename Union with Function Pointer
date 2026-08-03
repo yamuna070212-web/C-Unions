@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void hello()
+{
+    printf("Hello World\n");
+}
+
+union Function
+{
+    void (*fun)();
+};
+
+int main()
+{
+    union Function f;
+
+    f.fun = hello;
+
+    f.fun();
+
+    return 0;
+}
+Output
+Hello World

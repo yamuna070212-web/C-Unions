@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+struct Test
+{
+    int a;
+    float b;
+    char c;
+};
+
+union TestUnion
+{
+    int a;
+    float b;
+    char c;
+};
+
+int main()
+{
+    printf("Structure Size = %lu bytes\n", sizeof(struct Test));
+    printf("Union Size = %lu bytes\n", sizeof(union TestUnion));
+
+    return 0;
+}
+Sample Output
+Structure Size = 12 bytes
+Union Size = 4 bytes
+
+Note: The exact structure size may vary depending on your compiler and system because of padding and alignment.

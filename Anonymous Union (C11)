@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+struct Data
+{
+    union
+    {
+        int i;
+        float f;
+    };
+};
+
+int main()
+{
+    struct Data d;
+
+    d.i = 100;
+
+    printf("Value = %d\n", d.i);
+
+    return 0;
+}
+Output
+Value = 100

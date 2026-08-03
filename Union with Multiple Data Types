@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+union Information
+{
+    int id;
+    float marks;
+    char grade;
+};
+
+int main()
+{
+    union Information info;
+
+    info.grade = 'A';
+
+    printf("Grade = %c\n", info.grade);
+
+    return 0;
+}
+Output
+Grade = A

@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+struct Employee
+{
+    union
+    {
+        int id;
+    } emp;
+
+    union
+    {
+        float salary;
+    } pay;
+};
+
+int main()
+{
+    struct Employee e;
+
+    e.emp.id = 101;
+    e.pay.salary = 35000.50;
+
+    printf("ID = %d\n", e.emp.id);
+    printf("Salary = %.2f\n", e.pay.salary);
+
+    return 0;
+}
+Output
+ID = 101
+Salary = 35000.50

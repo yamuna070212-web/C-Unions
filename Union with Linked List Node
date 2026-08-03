@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+union Data
+{
+    int num;
+    char ch;
+};
+
+struct Node
+{
+    union Data data;
+    struct Node *next;
+};
+
+int main()
+{
+    struct Node node;
+
+    node.data.num = 50;
+    node.next = NULL;
+
+    printf("Data = %d\n", node.data.num);
+
+    return 0;
+}
+Output
+Data = 50

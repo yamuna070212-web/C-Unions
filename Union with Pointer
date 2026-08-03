@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+union Pointer
+{
+    int value;
+    int *ptr;
+};
+
+int main()
+{
+    int x = 100;
+
+    union Pointer p;
+
+    p.ptr = &x;
+
+    printf("Value = %d\n", *p.ptr);
+
+    return 0;
+}
+Output
+Value = 100

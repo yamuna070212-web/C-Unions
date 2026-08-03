@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+union Sensor
+{
+    int temperature;
+    float humidity;
+};
+
+int main()
+{
+    union Sensor s;
+
+    s.temperature = 32;
+    printf("Temperature = %d°C\n", s.temperature);
+
+    s.humidity = 65.5;
+    printf("Humidity = %.1f%%\n", s.humidity);
+
+    return 0;
+}
+Output
+Temperature = 32°C
+Humidity = 65.5%

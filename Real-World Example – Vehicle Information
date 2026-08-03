@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+union Vehicle
+{
+    int bikeNumber;
+    float carMileage;
+};
+
+int main()
+{
+    union Vehicle v;
+
+    v.carMileage = 18.5;
+
+    printf("Car Mileage = %.1f km/l\n", v.carMileage);
+
+    return 0;
+}
+Output
+Car Mileage = 18.5 km/l

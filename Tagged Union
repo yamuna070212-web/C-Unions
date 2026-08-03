@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+enum Type
+{
+    INT,
+    FLOAT
+};
+
+struct Value
+{
+    enum Type type;
+
+    union
+    {
+        int i;
+        float f;
+    } data;
+};
+
+int main()
+{
+    struct Value v;
+
+    v.type = FLOAT;
+    v.data.f = 98.5;
+
+    if(v.type == FLOAT)
+        printf("Value = %.2f\n", v.data.f);
+
+    return 0;
+}
+Output
+Value = 98.50

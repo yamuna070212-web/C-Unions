@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+union Status
+{
+    struct
+    {
+        unsigned int power : 1;
+        unsigned int error : 1;
+        unsigned int ready : 1;
+    } bits;
+
+    unsigned int value;
+};
+
+int main()
+{
+    union Status s;
+
+    s.value = 0;
+
+    s.bits.power = 1;
+    s.bits.ready = 1;
+
+    printf("Power = %u\n", s.bits.power);
+    printf("Error = %u\n", s.bits.error);
+    printf("Ready = %u\n", s.bits.ready);
+    printf("Value = %u\n", s.value);
+
+    return 0;
+}
+Output
+Power = 1
+Error = 0
+Ready = 1
+Value = 5
